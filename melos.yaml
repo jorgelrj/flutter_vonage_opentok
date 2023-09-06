@@ -1,0 +1,21 @@
+name: flutter_vonage_opentok_workspace
+
+packages:
+  - flutter_vonage_opentok
+  - flutter_vonage_opentok_platform_interface
+  - flutter_vonage_opentok_web
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+    runPubGetInParallel: true
+
+  clean:
+    hooks:
+      post: melos exec "flutter clean"
+
+scripts:
+  analyze:
+    run: flutter analyze .
+    exec:
+      failFast: true

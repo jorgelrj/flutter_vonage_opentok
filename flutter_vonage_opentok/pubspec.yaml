@@ -1,0 +1,31 @@
+name: flutter_vonage_opentok
+description: Flutter plugin for Vonage OpenTok SDK
+
+version: 1.2.1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter: { sdk: flutter }
+  flutter_vonage_opentok_platform_interface: ^1.0.2
+  flutter_vonage_opentok_web: ^1.0.1
+
+dev_dependencies:
+  flutter_test: { sdk: flutter }
+  my_linter: ^0.0.6
+  plugin_platform_interface: ^2.1.6
+
+flutter:
+  assets:
+    - assets/
+  plugin:
+    platforms:
+      android:
+        package: com.example.flutter_vonage_opentok
+        pluginClass: FlutterVonageOpentokPlugin
+      ios:
+        pluginClass: FlutterVonageOpentokPlugin
+      web:
+        default_package: flutter_vonage_opentok_web

@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: flutter_vonage_opentok_platform_interface,flutter_vonage_opentok_web
+dependency_overrides:
+  flutter_vonage_opentok_platform_interface:
+    path: ../flutter_vonage_opentok_platform_interface
+  flutter_vonage_opentok_web:
+    path: ../flutter_vonage_opentok_web

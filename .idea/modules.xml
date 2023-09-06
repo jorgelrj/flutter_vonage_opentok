@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flutter_vonage_opentok/melos_flutter_vonage_opentok.iml" filepath="$PROJECT_DIR$/flutter_vonage_opentok/melos_flutter_vonage_opentok.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_vonage_opentok_platform_interface/melos_flutter_vonage_opentok_platform_interface.iml" filepath="$PROJECT_DIR$/flutter_vonage_opentok_platform_interface/melos_flutter_vonage_opentok_platform_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_vonage_opentok_web/melos_flutter_vonage_opentok_web.iml" filepath="$PROJECT_DIR$/flutter_vonage_opentok_web/melos_flutter_vonage_opentok_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_flutter_vonage_opentok_workspace.iml" filepath="$PROJECT_DIR$/melos_flutter_vonage_opentok_workspace.iml" />
+    </modules>
+  </component>
+</project>
