@@ -19,7 +19,10 @@ abstract class FlutterVonageOpentokPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<Publisher> initPublisher() {
+  Future<Publisher> initPublisher({
+    bool publishAudio = true,
+    bool publishVideo = true,
+  }) {
     throw UnimplementedError('initPublisher() has not been implemented.');
   }
 

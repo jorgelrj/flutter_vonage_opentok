@@ -33,7 +33,10 @@ class FlutterVonageOpentokWeb extends FlutterVonageOpentokPlatform {
   }
 
   @override
-  Future<Publisher> initPublisher() async {
+  Future<Publisher> initPublisher({
+    bool publishAudio = true,
+    bool publishVideo = true,
+  }) async {
     final completer = Completer();
 
     final jsPublisher = ot_interop.initPublisher(
@@ -43,8 +46,8 @@ class FlutterVonageOpentokWeb extends FlutterVonageOpentokPlatform {
         width: '100%',
         height: '100%',
         showControls: false,
-        publishAudio: true,
-        publishVideo: true,
+        publishAudio: publishAudio,
+        publishVideo: publishVideo,
       ),
       allowInterop(
         ([error]) {

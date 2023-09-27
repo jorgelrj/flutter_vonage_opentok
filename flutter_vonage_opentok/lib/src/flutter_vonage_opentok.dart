@@ -8,8 +8,14 @@ class FlutterVonageOpentok {
   }
 
   /// Throws a [PublisherException] if the publisher fails to initialize.
-  Future<Publisher> initPublisher() {
-    return _delegate.initPublisher();
+  Future<Publisher> initPublisher({
+    bool publishAudio = true,
+    bool publishVideo = true,
+  }) {
+    return _delegate.initPublisher(
+      publishAudio: publishAudio,
+      publishVideo: publishVideo,
+    );
   }
 
   VideoSession initSession(String apiKey, String sessionId) {
