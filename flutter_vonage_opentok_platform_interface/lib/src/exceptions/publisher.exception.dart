@@ -13,6 +13,14 @@ class PublisherException implements Exception {
   }
 }
 
+class PublisherHardwareUnavailableException extends PublisherException {
+  PublisherHardwareUnavailableException()
+      : super(
+          'Hardware unavailable',
+          'OT_HARDWARE_UNAVAILABLE',
+        );
+}
+
 class PublisherPermissionDeniedException extends PublisherException {
   PublisherPermissionDeniedException()
       : super(

@@ -1,7 +1,7 @@
 name: flutter_vonage_opentok
 description: Flutter plugin for Vonage OpenTok SDK
 
-version: 1.2.2
+version: 1.2.5
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -9,8 +9,8 @@ environment:
 
 dependencies:
   flutter: { sdk: flutter }
-  flutter_vonage_opentok_platform_interface: ^1.0.3
-  flutter_vonage_opentok_web: ^1.0.2
+  flutter_vonage_opentok_platform_interface: ^1.0.5
+  flutter_vonage_opentok_web: ^1.0.5
 
 dev_dependencies:
   flutter_test: { sdk: flutter }

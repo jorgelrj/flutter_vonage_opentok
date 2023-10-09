@@ -14,6 +14,9 @@ class PublisherExceptionFactory {
     final enumError = PublisherError.fromString(error.name);
 
     return switch (enumError) {
+      (PublisherError.OT_USER_MEDIA_ACCESS_DENIED) => PublisherPermissionDeniedException(),
+      (PublisherError.OT_REQUESTED_DEVICE_PERMISSION_DENIED) => PublisherPermissionDeniedException(),
+      (PublisherError.OT_HARDWARE_UNAVAILABLE) => PublisherHardwareUnavailableException(),
       (_) => PublisherException(
           error.message,
           error.name,
