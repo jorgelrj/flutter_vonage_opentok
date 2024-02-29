@@ -1,7 +1,7 @@
 name: flutter_vonage_opentok_web
 description: The web implementation of flutter_vonage_opentok.
 
-version: 1.0.5
+version: 1.0.6
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

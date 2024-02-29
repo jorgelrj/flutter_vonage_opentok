@@ -30,10 +30,12 @@ class WebVideoSession extends VideoSession {
 
   @override
   Future<void> connect(String token) async {
-    debugPrint('''
-    Connecting to session
-     - token: $token
-    ''');
+    if (kDebugMode) {
+      debugPrint('''
+        Connecting to session
+         - token: $token
+        ''');
+    }
 
     final completer = Completer<void>();
 
@@ -182,6 +184,7 @@ class WebVideoSession extends VideoSession {
   void _subscribeSubscriberEvents(JsEvent event) {
     debugPrint('Session.on.streamCreated ${event.stream?.streamId}');
 
+    Timer? timer;
     final subscriber = _jsVideoSession.subscribe(
       event.stream!,
       VonageOpentok.subscriberVideoElement,
@@ -216,7 +219,8 @@ class WebVideoSession extends VideoSession {
           const SubscriberConnected(),
         );
 
-        Timer.periodic(
+        timer?.cancel();
+        timer = Timer.periodic(
           const Duration(minutes: 5),
           (_) {
             try {
@@ -238,6 +242,7 @@ class WebVideoSession extends VideoSession {
       allowInterop((event) {
         debugPrint('Subscriber.on.disconnected');
         _streamController.add(const SubscriberLost());
+        timer?.cancel();
       }),
     );
 
@@ -246,6 +251,7 @@ class WebVideoSession extends VideoSession {
       allowInterop((event) {
         debugPrint('Subscriber.on.destroyed');
         _streamController.add(const SubscriberDestroyed());
+        timer?.cancel();
       }),
     );
 

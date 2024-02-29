@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_vonage_opentok_platform_interface/flutter_vonage_opentok_platform_interface.dart';
 import 'package:flutter_vonage_opentok_web/factories/factories.dart';
 import 'package:flutter_vonage_opentok_web/interop/interop.dart';
@@ -16,13 +16,13 @@ class FlutterVonageOpentokWeb extends FlutterVonageOpentokPlatform {
 
   @override
   VideoSession initSession(String apiKey, String sessionId) {
-    debugPrint(
-      '''
+    if (kDebugMode) {
+      debugPrint('''
       Initializing session:
         - apiKey: $apiKey
         - sessionId: $sessionId
-      ''',
-    );
+      ''');
+    }
 
     final jsSession = ot_interop.initSession(
       apiKey,
